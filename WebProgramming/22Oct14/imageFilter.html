@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family:Arial">
+    
+<p>Convert the image to grayscale:</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png" 
+alt="Lenna" width="150" height="150" style="border: 5px solid #555">
+
+<img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png" 
+alt="Lenna" width="150" height="150" style="-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+filter: grayscale(100%); border: 5px solid #555">
+
+<p><strong>Note:</strong> The filter property is not supported in Internet Explorer, Edge 12, or Safari 5.1 and earlier.</p>
+
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th {
+      text-align: left;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Left-align Headers</h2>
+    
+    <p>To left-align the table headers, use the CSS text-align property.</p>
+    
+    <table style="width:50%">
+      <style>
+        table {
+        position: relative;;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        th, td {
+        text-align: left;
+        padding: 8px;
+      }
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+      </style>
+      <tr style="background-color:cornflowerblue">
+        <th style="color: white">Time</th>
+        <th style="color: white">Mon</th>
+        <th style="color: white">Tue</th>
+        <th style="color: white">Wed</th>
+      </tr>
+      <tr>
+        <td>7:30 AM</td>
+        <td>Breakfast</td>
+        <td>Breakfast</td>
+        <td>Breakfast</td>
+      </tr>
+      <tr>
+        <td>8:00 AM</td>
+        <td style="background-color:greenyellow" rowspan="2">Business: lecture Bldg, Rm 256</td>
+        <td style="background-color:orange" rowspan="3">Business: lecture Bldg, Rm 256 </td>
+        <td style="background-color:greenyellow" rowspan="2">Business: lecture Bldg, Rm 256 </td>
+      </tr>
+      <tr>
+        <td>8:30 AM</td>
+      </tr>
+      <tr>
+        <td>9:00 AM</td>
+        <td style="background-color:rgb(125, 195, 201)" rowspan="2">Applied Math Bldg H, Rm 100</td>
+        <td style="background-color:rgb(125, 195, 201)" rowspan="2">Physics Bldg M, Rm 100</td>
+        
+      </tr>
+      <tr>
+        <td>9:30 AM</td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>10:00 AM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>10:30 AM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>11:00 AM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>11:30 AM</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>      
+    </table>
+    
+    </body>
+</body>
+</html>
