@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function draw_rect() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 150, 75);
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect(50, 30, 150, 75);
+
+        ctx.strokeStyle = "#000000";
+        ctx.beginPath();
+        ctx.moveTo(0, 80);
+        ctx.lineTo(0, 80);
+        ctx.lineTo(45, 80);
+        ctx.lineTo(45, 110);
+        ctx.lineTo(200, 110);
+        ctx.stroke();
+
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("HI", 75, 65);
+
+        ctx.fillStyle = "blue";
+        ctx.beginPath();
+        ctx.moveTo(200, 30);
+        ctx.arc(200, 30, 5, 1.5, 3, Math.PI * 2, true);
+
+        ctx.closePath();
+        ctx.stroke();
+      }
+
+      function draw_line() {
+        var c = document.getElementById("myCanvas1");
+        var ctx = c.getContext("2d");
+        ctx.strokeStyle = "#ff8866";
+        ctx.beginPath();
+        ctx.moveTo(50, 50);
+        ctx.lineTo(150, 50);
+        ctx.lineTo(200, 100);
+        ctx.lineTo(350, 100);
+        ctx.stroke();
+      }
+
+      function draw_circle() {
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+
+        ctx.strokeStyle = "#376b4d";
+        ctx.lineWidth = 20;
+
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "#376b4d");
+        grd.addColorStop(1, "#fcba43");
+        ctx.fillStyle = grd;
+
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, Math.PI * 2, true);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("Hallo", 100, 100);
+      }
+    </script>
+    <input type="button" value="overlap rect" onclick="draw_rect()" /><br />
+    <canvas id="myCanvas" style="border: 1px solid #000000"></canvas><br />
+
+    <input type="button" value=" show line" onclick="draw_line()" /><br />
+    <canvas id="myCanvas1" style="border: 1px solid #000000"></canvas><br />
+
+    <input type="button" value=" with circle" onclick="draw_circle()" /><br />
+    <canvas id="myCanvas2" style="border: 1px solid #000000"></canvas><br />
+  </body>
+</html>
