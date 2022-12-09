@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tetris</title>
+	</head>
+	<body>
+        <canvas
+        id = "game"
+        width="300" 
+        height="600"
+
+        ></canvas>
+        
+        <h2 id = "scoreboard">Score: 0</h2>
+        <script src="./tetris.js"></script>
+        <script src="./tetris.css"></script>
+
+        
+        <button onclick="model.moveDown()">DOWN</button> 
+        <button onclick="model.move(true)">RIGHT</button>
+        <button onclick="model.rotate()">ROTATE</button>
+        <button onclick="model.move(false)">LEFT</button>
+ 
+    </body>
+</html>
